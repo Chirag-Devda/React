@@ -21,22 +21,14 @@ function App() {
     },
   ]);
 
-  const Todo = ({ todo }) => {
-    return (
-      <>
-        <div className="Todo-container">
-          <div className="todo-title">{todo.title}</div>
-          <div className="todo-title">{todo.disc}</div>
-        </div>
-      </>
-    );
-  };
-
   return (
     <>
-      <div>
+      <div
+        className=" flex justify-between 
+      "
+      >
         <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+          <img src={viteLogo} className="logo size-38 " alt="Vite logo" />
         </a>
         <a href="https://react.dev" target="_blank">
           <img src={reactLogo} className="logo react" alt="React logo" />
@@ -64,7 +56,12 @@ function App() {
       </div>
 
       {todos.map((todo) => {
-        return <Todo key={todo.title} todo={todo} />;
+        return (
+          <div key={todo.title} className="Todo-container border-collapse ">
+            <div className="todo-title">{todo.title}</div>
+            <div className="todo-title">{todo.disc}</div>
+          </div>
+        );
       })}
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
