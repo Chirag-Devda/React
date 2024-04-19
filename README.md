@@ -11,3 +11,7 @@ reapo for practice react tutorial
 <p>Lect 4 : React Routers using npm i react-router-dom</p>
 <br>
 <p>Lect 5 : useContext Hook </p>
+<br>
+<p>Lect 6 : useMemo Hook </p>
+<br>
+<p>Lect 7 : useCallback Hook </p>
