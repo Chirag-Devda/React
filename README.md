@@ -14,4 +14,4 @@ reapo for practice react tutorial
 <br>
 <p>Lect 6 : useMemo Hook </p>
 <br>
-<p>Lect 7 : useCallback Hook </p>
+<p>Lect 7 : useCallback Hook and memo for export components </p>
