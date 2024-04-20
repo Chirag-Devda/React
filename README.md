@@ -15,3 +15,5 @@ reapo for practice react tutorial
 <p>Lect 6 : useMemo Hook </p>
 <br>
 <p>Lect 7 : useCallback Hook and memo for export components </p>
+<br>
+<p>Lect 8 : Form Handling With React Hook Form Library </p>
