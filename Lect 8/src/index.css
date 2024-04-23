@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -65,4 +69,32 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+/* Define a custom checkbox style */
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 15px; /* Adjust the size as needed */
+  height: 15px; /* Adjust the size as needed */
+  border: 2px solid #999; /* Border color */
+  border-radius: 4px; /* Rounded corners */
+  position: relative;
+}
+
+/* Define the appearance of the checkbox when checked */
+input[type="checkbox"]:checked {
+  background-color: #007bff; /* Change background color when checked */
+  border-color: #553ee8; /* Change border color when checked */
+}
+
+/* Create a custom checkmark */
+input[type="checkbox"]:checked::before {
+  content: "\2713"; /* Unicode character for a checkmark */
+  font-size: 10px; /* Adjust the size of the checkmark */
+  color: white; /* Color of the checkmark */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
