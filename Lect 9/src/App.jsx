@@ -21,9 +21,20 @@ function App() {
     setError,
     formState: { errors, isSubmitting },
   } = useForm();
+
+  // sending the object to localhost3000 means at our backend whitout delaying
+
   const onSubmit = async (data) => {
-    await delay(2);
-    console.log(data);
+    // await delay(2);
+    let r = fetch("http://localhost:3000/", {
+      method: "Post",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
+    let res = await (await r).text;
+    console.log(data, res);
     if (data.UserName === "sahil") {
       setError("invaliduser", { message: "this user is cheap" });
     }
