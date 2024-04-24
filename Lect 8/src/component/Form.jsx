@@ -17,10 +17,10 @@ const Form = () => {
     register,
     handleSubmit,
     setError,
-    formState: { errors },
+    formState: { errors, isSubmitting },
   } = useForm();
 
-  const onSubmit = (data) => {
+  const onSubmit = async (data) => {
     if (data.password !== data.ConfirmPassword) {
       setError("matchpassword", {
         message: "Passwords do not match. Please try again.",
@@ -31,6 +31,16 @@ const Form = () => {
 
   return (
     <div className="container py-10 px-5 w-[40vw] bg-gray-100 rounded-lg max-h-full min-h-[90vh] relative mb-[200px] top-[100px] ">
+      {isSubmitting && (
+        <div>
+          {isSubmitting && (
+            <div className="loader-container">
+              <div className="loader"></div>
+              <div className="loading-text">Loading...</div>
+            </div>
+          )}
+        </div>
+      )}
       <div className="sign-up w-full flex justify-around">
         <button className="bg-transparent text-[#7541ff] py-4 px-12 rounded-lg">
           Sign-in
