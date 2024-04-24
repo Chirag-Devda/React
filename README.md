@@ -19,3 +19,5 @@ reapo for practice react tutorial
 <p>Lect 8 : Form Handling With React Hook Form Library </p>
 <br>
 <p>Lect 9 : Form Handling With Backend</p>
+<br>
+<p>Lect 10 : React Redux</p>
