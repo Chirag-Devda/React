@@ -18,9 +18,12 @@ export const todoSlice = createSlice({
     removetodo: (state, action) => {
       state.todos = state.todos.filter((todo) => todo.id !== action.payload);
     },
+    updatetodo: (state, action) => {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload);
+    },
   },
 });
 
-export const { addtodo, removetodo } = todoSlice.actions; // export individual functionality to access in components
+export const { addtodo, removetodo, updatetodo } = todoSlice.actions; // export individual functionality to access in components
 
 export default todoSlice.reducer; // export all the reducers to store

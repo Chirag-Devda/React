@@ -1,10 +1,11 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { removetodo } from "../Features/Todo/todoSlice";
+import { removetodo, updatetodo } from "../Features/Todo/todoSlice";
 
-const Todo = () => {
+const Todo = ({ setInput }) => {
   const todos = useSelector((state) => state.todos);
   const dispatch = useDispatch();
+
   return (
     <>
       <div>Todo</div>
@@ -12,6 +13,14 @@ const Todo = () => {
         {todos.map((todo) => (
           <li key={todo.id}>
             <p>{todo.text}</p>
+            <button
+              onClick={() => {
+                dispatch(updatetodo(todo.id));
+                setInput(todo.text);
+              }}
+            >
+              Update
+            </button>
             <button
               onClick={() => {
                 dispatch(removetodo(todo.id));
